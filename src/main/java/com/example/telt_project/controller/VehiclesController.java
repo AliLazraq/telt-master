@@ -11,7 +11,6 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/vehicles")
-@CrossOrigin(origins = "*")
 public class VehiclesController {
     
         private final TeltonikaDataService vehicleDataService;

@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
 @RequestMapping("/api/alerts")
+
 public class AlertController {
 
     @Autowired
@@ -21,6 +21,13 @@ public class AlertController {
     public List<Alert> getAllAlerts() {
         return alertRepository.findAll();
     }
+
+    // Handle preflight OPTIONS requests
+    @RequestMapping(method = RequestMethod.OPTIONS, value = "/delete-all")
+    public ResponseEntity<?> handleOptions() {
+        return ResponseEntity.ok().build();
+    }
+    
     @DeleteMapping("/delete-all")
     public ResponseEntity<String> deleteAllAlerts() {
         alertRepository.deleteAll();

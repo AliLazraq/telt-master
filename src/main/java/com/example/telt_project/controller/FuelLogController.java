@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/fuel-logs")
 @CrossOrigin(origins = "*")
+@RequestMapping("/api/fuel-logs")
 public class FuelLogController {
 
     private final TeltonikaDataService fuelLogService;

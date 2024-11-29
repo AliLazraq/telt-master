@@ -10,7 +10,7 @@ import java.util.Date;
 @Component
 public class JwtUtil {
 
-    private static final String SECRET_KEY = "806cf9f0b8a9bcc5cd2b90c3d639622aecacd00fa4154d21229650d941f2bc67afd6dfefa534ebb51725f9bc0e6d46cda4928839c21e06a73c8b4cf08c400b8b"; // Use a 256-bit key
+    private static final String SECRET_KEY = "bf723f8355da51cede14b6fade2a0c7f41fb9b66143187cbbd085e8217e25ef906ae3407a8ae670a311c7f944ea5c8507c2f49fc3dee9a2ca55d511bd8ba6894"; // Use a 256-bit key
     private static final int EXPIRATION_TIME = 1000 * 60 * 60; // 1 hour
 
     private final Key key;
